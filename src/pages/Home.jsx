@@ -1,10 +1,10 @@
 import ProductList from '../components/ProductList';
 
-const Home = ({ list }) => {
+const Home = ({ list, handleClick }) => {
   return (
     <div>
       Testing
-      <ProductList />
+      <ProductList list={list} handleClick={handleClick} />
     </div>
   )
 }
