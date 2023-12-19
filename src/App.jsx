@@ -1,30 +1,22 @@
-import { useState } from 'react';
-import Home from './pages/Home';
-import ProductInfo from './pages/ProductInfo';
-
-const temp = [
-  {
-    name: "Instinct VS Climbing Shoe - Women's",
-    url: 'https://www.backcountry.com/scarpa-instinct-vs-climbing-shoe'
-  },
-  {
-    name: "Futura Climbing Shoe - Women's",
-    url: 'https://www.backcountry.com/la-sportiva-futura-climbing-shoe-women'
-  }
-]
+import { useEffect } from 'react';
+import { getSession } from './lib/fetchFunctions.js';
+import { Outlet } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { updateUrlList } from './features/sessionSlice.js';
 
 function App() {
-  const [urlList, setUrlList] = useState(temp);
-  const [active, setActive] = useState();
+  const dispatch = useDispatch();
 
-  const handleClick = (data) => {
-    setActive(data);
-  }
+  useEffect(() => {
+    getSession()
+      .then(({ data }) => {
+        dispatch(updateUrlList(data.urls));
+      })
+  }, [dispatch]);
 
   return (
     <>
-      <Home list={urlList} handleClick={handleClick}/>
-      <ProductInfo data={active} />
+      <Outlet />
     </>
   )
 }

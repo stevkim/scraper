@@ -1,10 +1,11 @@
 import ProductList from '../components/ProductList';
+import InputBar from '../components/InputBar';
 
-const Home = ({ list, handleClick }) => {
+const Home = () => {
   return (
     <div>
-      Testing
-      <ProductList list={list} handleClick={handleClick} />
+      <InputBar />
+      <ProductList />
     </div>
   )
 }

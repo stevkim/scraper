@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const historySchema = new mongoose.Schema({
   name: { type: String, required: true, index: true },
   price: String,
-  sale: String,
+  sale: { type: String, default: null },
   date: { type: Date, default: Date.now() }
 });
 

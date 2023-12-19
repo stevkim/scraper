@@ -1,9 +1,8 @@
 import ProductHistory from '../models/productHistory.js';
 
 export const getProductHistory = (req, res) => {
-  ProductHistory.find({ name: req.query.name })
+  ProductHistory.find({ name: req.params.name })
     .then(results => {
-      console.log(results);
       res.status(200).json(results);
     })
     .catch(err => {

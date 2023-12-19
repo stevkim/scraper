@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 
 const sessionSchema = new mongoose.Schema({
-  _id: { type: String, required: true, unique: true, index: true },
+  _id: { type: String, required: true },
   urls: [{
-    product: String,
+    name: String,
     url: String
   }],
 });

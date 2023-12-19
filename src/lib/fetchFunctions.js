@@ -15,6 +15,13 @@ export const getHistory = (data) => {
 };
 
 export const addHistory = (input) => {
-  console.log(input)
   return axios.post(`/product/${convertName(input.name)}/history`, input);
+}
+
+export const getSession = () => {
+  return axios.get('/session');
+}
+
+export const updateSession = (input) => {
+  return axios.put('/session', input);
 }
