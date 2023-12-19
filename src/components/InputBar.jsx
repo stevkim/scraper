@@ -5,9 +5,10 @@ const InputBar = () => {
   const [url, setUrl] = useState('');
 
   const handleClick = () => {
+    if (!url.includes('backcountry.com')) return;
     const path = new URL(url).pathname.slice(1);
     updateSession({ name: path, url: url });
-  }
+  };
 
   return (
     <div>

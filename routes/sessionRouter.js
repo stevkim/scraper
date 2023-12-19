@@ -3,7 +3,6 @@ import Session from '../models/session.js';
 export const getSession = (req, res) => {
   Session.findOne({ _id: req.cookies.sessionKey })
     .then(results => {
-      console.log(results);
       res.status(200).json(results);
     })
     .catch(err => {
@@ -28,4 +27,4 @@ export const updateSession = (req, res) => {
       console.log(err);
       res.sendStatus(404);
     })
-}
+};

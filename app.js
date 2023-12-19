@@ -22,6 +22,10 @@ app.get('/product', getProductInfo);
 app.get('/product/:name/history', getProductHistory);
 app.post('/product/:name/history', addProductHistory);
 
+app.get('/*', (req, res) => {
+  res.redirect('/');
+});
+
 app.listen(3000, () => {
   console.log(`Listening on port: 3000`)
 });

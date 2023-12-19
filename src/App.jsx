@@ -3,6 +3,7 @@ import { getSession } from './lib/fetchFunctions.js';
 import { Outlet } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { updateUrlList } from './features/sessionSlice.js';
+import Navbar from './components/Navbar';
 
 function App() {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <Outlet />
     </>
   )

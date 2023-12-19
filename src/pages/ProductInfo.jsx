@@ -4,6 +4,7 @@ import CurrentCard from '../components/CurrentCard';
 import { setProductInfo, setProductHistory } from '../features/sessionSlice.js';
 import { useSelector, useDispatch } from 'react-redux';
 import HistoryList from '../components/HistoryList';
+import ProductSkeleton from '../components/ProductSkeleton';
 
 const ProductInfo = () => {
   const dispatch = useDispatch();
@@ -26,11 +27,11 @@ const ProductInfo = () => {
   }, [data, dispatch])
 
   if (isLoading) {
-    return <div>Loading...</div>
+    return <ProductSkeleton />
   }
 
   return (
-    <div>
+    <div style={{ marginTop: '100px' }}>
       <CurrentCard />
       <HistoryList />
     </div>

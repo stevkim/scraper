@@ -1,0 +1,148 @@
+/*### Navbar ###*/
+
+.navbar {
+  width: 100%;
+  height: 30px;
+  padding: .5em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #1a1a1a;
+  font-size: 2rem;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/*### Product List ###*/
+
+.list-item {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  width: fit-content;
+}
+
+.list-item:hover {
+  border-color: #646cff;
+}
+.list-item:focus,
+.list-item:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+/*### Product Card ###*/
+.product-card {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  padding: 2em;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.product-title {
+  font-size: 3rem;
+}
+
+.product-sale {
+  color: red;
+}
+
+.product-image {
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 60%;
+  height: auto;
+  margin: 1em;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.size-grid {
+  max-width: 50%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.size-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+}
+
+/*### History List ###*/
+
+.history-table {
+  width: 90vw;
+  max-height: 40vh;
+  margin: 0 auto;
+
+}
+
+tr {
+  height: 10%;
+}
+
+tr:nth-child(even) {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+}
+
+th {
+  font-weight: bold;
+}
+
+th, td {
+  text-align: center;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-family: inherit;
+  height: fit-content;
+  max-height: 20px;
+}
+
+.history-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+  margin: 2em 0;
+}
+
+.history-pagination div:not(.active-page) {
+  cursor: pointer;
+}
+
+.history-pagination div:hover:not(.active-page) {
+  color: gray;
+}
+
+.active-page {
+  font-weight: bold;
+  color: #646cff;
+}
