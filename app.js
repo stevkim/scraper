@@ -2,8 +2,8 @@ import express from 'express';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import './db.js';
-import { getProductInfo } from './routes/productRouter.js';
-import { getProductHistory, addProductHistory } from './routes/historyRouter.js';
+import { getProductInfo, addProduct } from './routes/productRouter.js';
+import { getProductHistory } from './routes/historyRouter.js';
 import { getSession, updateSession } from './routes/sessionRouter.js';
 import verifyCookie from './middleware/verifyCookie.js';
 
@@ -19,8 +19,8 @@ app.get('/session', getSession);
 app.put('/session', updateSession);
 
 app.get('/product', getProductInfo);
+app.post('/product', addProduct);
 app.get('/product/:name/history', getProductHistory);
-app.post('/product/:name/history', addProductHistory);
 
 app.get('/*', (req, res) => {
   res.redirect('/');

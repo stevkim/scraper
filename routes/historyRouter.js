@@ -11,13 +11,3 @@ export const getProductHistory = (req, res) => {
     })
 };
 
-export const addProductHistory = (req, res) => {
-  ProductHistory.create(req.body)
-    .then(() => {
-      res.sendStatus(201);
-    })
-    .catch(err => {
-      console.log(err);
-      res.sendStatus(404);
-    })
-};

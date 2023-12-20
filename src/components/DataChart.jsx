@@ -22,7 +22,7 @@ const DataChart = ({ dataList, setOpenChart }) => {
   const product = useSelector(state => state.session.productInfo);
   const dataSet = useMemo(() => chartData(dataList), [dataList]);
 
-  const data = useMemo(() => ({
+  const data = {
     labels: dataSet.dateData,
     datasets: [
       {
@@ -33,7 +33,7 @@ const DataChart = ({ dataList, setOpenChart }) => {
         borderWidth: 2
       }
     ]
-  }), [dataSet]);
+  }
 
 
   return (

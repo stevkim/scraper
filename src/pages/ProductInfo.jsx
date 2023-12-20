@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getData, getHistory, addHistory } from '../lib/fetchFunctions.js';
+import { getData, getHistory } from '../lib/fetchFunctions.js';
 import CurrentCard from '../components/CurrentCard';
 import { setProductInfo, setProductHistory } from '../features/sessionSlice.js';
 import { useSelector, useDispatch } from 'react-redux';
@@ -18,8 +18,6 @@ const ProductInfo = () => {
       dispatch(setProductInfo(await result.data));
       dispatch(setProductHistory(await stored.data));
       setIsLoading(false);
-
-      addHistory(await result.data);
     }
     fetchData();
 

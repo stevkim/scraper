@@ -1,14 +1,27 @@
 import { useState } from 'react';
-import { updateSession } from '../lib/fetchFunctions.js';
+import { updateSession, addProduct, getSession } from '../lib/fetchFunctions.js';
+import { useDispatch } from 'react-redux';
+import { updateUrlList } from '../features/sessionSlice.js';
 import './components.css';
 
 const InputBar = () => {
+  const dispatch = useDispatch();
   const [url, setUrl] = useState('');
 
   const handleClick = () => {
     if (!url.includes('backcountry.com')) return;
     const path = new URL(url).pathname.slice(1);
-    updateSession({ name: path, url: url });
+    addProduct({ name: path, url: url });
+    updateSession({ name: path, url: url })
+      .then(() => {
+        getSession()
+          .then(({ data }) => {
+            dispatch(updateUrlList(data.urls));
+          })
+      })
+      .finally(() => {
+        setUrl('');
+      })
   };
 
   return (
