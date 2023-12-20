@@ -35,11 +35,13 @@ const DataChart = ({ dataList, setOpenChart }) => {
     ]
   }
 
-
   return (
     <div className='line-chart-wrapper'>
       <h1 className='line-chart-title'>Price Changes for {product.productName}</h1>
-      <Line options={{ responsive: true }} data={data} />
+      {dataSet.dateData.length > 5
+        ? <Line options={{ responsive: true }} data={data} />
+        : <div className='fallback-message'>Not enough data to graph, check back in a few days!</div>
+      }
       <svg onClick={() => setOpenChart(false)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="black" className="icon exit-line-chart">
         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
       </svg>

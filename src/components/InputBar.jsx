@@ -19,9 +19,7 @@ const InputBar = () => {
             dispatch(updateUrlList(data.urls));
           })
       })
-      .finally(() => {
-        setUrl('');
-      })
+    setUrl('');
   };
 
   return (

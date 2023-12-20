@@ -53,7 +53,7 @@ const HistoryList = () => {
         </tr>
         {activeList.length > 0
           ? activeList.map(entry => <HistoryListItem key={entry._id} entry={entry} />)
-          : <div>No previous price history!</div>
+          : <td colSpan='4' className='fallback-message'>No previous price history!</td>
         }
       </table>
       {list.length > 10 &&

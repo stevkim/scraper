@@ -20,7 +20,7 @@ export const chartData = (data) => {
   }
 
   return {
-    priceData: prices,
-    dateData: Array.from(dates)
+    priceData: prices.reverse(),
+    dateData: Array.from(dates).reverse()
   }
 };

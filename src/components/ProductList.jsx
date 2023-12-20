@@ -16,7 +16,7 @@ const ProductList = () => {
         ? list.map(link => {
             return <Link key={link.name} className='list-item' onClick={() => dispatch(setActive(link))} to={link.name}>{createTitle(link.name)}</Link>
           })
-        : <div>Add a url to start tracking</div>
+        : <div className='fallback-message'>Add a url to start tracking</div>
       }
       </div>
     </section>
