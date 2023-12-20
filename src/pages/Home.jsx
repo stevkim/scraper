@@ -1,12 +1,11 @@
 import ProductList from '../components/ProductList';
 import InputBar from '../components/InputBar';
+import CallToAction from '../components/CallToAction';
 
 const Home = () => {
   return (
-    <div style={{ marginTop: '100px' }}>
-      <div>
-        Track items from <a target='_blank' rel='noreferrer' href='https://www.backcountry.com/'>Backcountry.com</a> to compare price changes over time!
-      </div>
+    <div className='page-wrapper'>
+      <CallToAction />
       <InputBar />
       <ProductList />
     </div>

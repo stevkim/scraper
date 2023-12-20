@@ -31,7 +31,7 @@ const ProductInfo = () => {
   }
 
   return (
-    <div style={{ marginTop: '100px' }}>
+    <div className='page-wrapper'>
       <CurrentCard />
       <HistoryList />
     </div>

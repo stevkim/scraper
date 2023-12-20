@@ -17,6 +17,25 @@
 
 /*### Product List ###*/
 
+.track-list-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.track-list-wrapper h1 {
+  text-align: center;
+}
+
+.track-list {
+  max-width: 90%;
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 .list-item {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -41,7 +60,7 @@
 
 /*### Product Card ###*/
 .product-card {
-  width: 90vw;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   padding: 2em;
@@ -94,12 +113,26 @@
 }
 
 /*### History List ###*/
-
 .history-table {
-  width: 90vw;
+  width: 100%;
   max-height: 40vh;
   margin: 0 auto;
+}
 
+.table-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.table-title svg {
+  margin-left: auto;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.table-title svg:hover {
+  color: #646cff;
 }
 
 tr {
@@ -145,4 +178,73 @@ th, td {
 .active-page {
   font-weight: bold;
   color: #646cff;
+}
+
+
+/*### Call to Action ###*/
+.call-to-action h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.mission-statement {
+  width: 80%;
+  max-width: 1000px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0 auto;
+  color: gray;
+}
+
+/*### URL input ###*/
+.input-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-section p {
+  font-size: 1.2rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  width: 100%;
+}
+
+.url-input {
+  width: 80%;
+  max-width: 300px;
+}
+
+/*### Line Chart ###*/
+.line-chart-title {
+  color: #242424;;
+  text-align: center;
+}
+
+.line-chart-wrapper {
+  width: 80%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.exit-line-chart {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  cursor: pointer;
+}
+
+.exit-line-chart:hover {
+  transform: scale(1.2);
 }

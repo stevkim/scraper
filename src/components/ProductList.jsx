@@ -9,9 +9,9 @@ const ProductList = () => {
   const list = useSelector((state) => state.session.urlList);
 
   return (
-    <div>
-      <h1>Currently Tracking: </h1>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+    <section className='track-list-wrapper'>
+      <h1>Currently Tracking</h1>
+      <div className='track-list'>
       {list.length > 0
         ? list.map(link => {
             return <Link key={link.name} className='list-item' onClick={() => dispatch(setActive(link))} to={link.name}>{createTitle(link.name)}</Link>
@@ -19,7 +19,7 @@ const ProductList = () => {
         : <div>Add a url to start tracking</div>
       }
       </div>
-    </div>
+    </section>
   )
 }
 
