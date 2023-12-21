@@ -6,11 +6,6 @@
   <h3 align="center">
     WebCountry
   </h3>
-  <p align="center">
-    <br />
-    <a href="https://github.com/Revenge-of-the-SithQL/atelier"><strong>Explore the docs »</strong></a>
-    <br />
-  </p>
 </div>
 
 <details>
@@ -48,22 +43,15 @@
 </details>
 
 ## About
-
-<div align="center">
-  <img src="./client/src/assets/demo1.gif" alt="project landing page image" width="700px" />
-<br />
-  <img src="./client/src/assets/demo2.gif" alt="project landing page image" width="700px" />
-</div>
-
-<br />
 <p>
-  Atelier is a desktop and mobile friendly app utilizing React and Express that enables users to browse through a collection of over 15 million products, add them to their outfits, read through a robust Q&A section, peruse the products ratings and reviews, and add products to their cart.
+  WebCountry is a desktop/mobile friendly app utilizing React and Express that enables users to track product info from <a target='_blank' href='https://www.backcountry.com/'>Backcountry.com</a>. Using the <a target='_blank' href='https://pptr.dev/'>Puppeteer</a> library, the application scrapes the page for up-to-date information every 12 hours as a background service. The user may visualize the changes over time in a line graph if enough data is collected.
 </p>
 
 ### Built With
 ![node.js](https://img.shields.io/badge/node-%23000000.svg?style=for-the-badge&logo=node.js)
 ![React](https://img.shields.io/badge/React-%23000000.svg?style=for-the-badge&logo=react&logoColor)
 ![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![Redux](	https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
 
 ## Getting Started
 
