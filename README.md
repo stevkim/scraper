@@ -53,6 +53,7 @@
 ![Redux](	https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
 ![React-Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ## Getting Started
 
@@ -105,9 +106,9 @@ WebCountry is run on the designated port and opens a webpage as soon as the npm 
 
 ## Roadmap
 
-- [x] Strategize each person's roles and widgets
-- [x] Setup the environment
-- [x] Create respective widgets
+- [x] Designing the App
+- [x] Build the Backend & the Scraping service
+- [x] Build the Frontend & integrate with the Backend
 - [x] Refactor and optimize code 
 - [x] Deploy on AWS
 
