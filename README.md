@@ -83,7 +83,7 @@ npm install npm@latest -g
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Revenge-of-the-SithQL/atelier
+   git clone https://github.com/stevkim/scraper/
    ```
 1. Install NPM packages
    ```sh
