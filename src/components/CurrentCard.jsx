@@ -6,7 +6,7 @@ const CurrentCard = () => {
   return (
     <div className='product-card'>
         <img className='product-image' src={product.imgUrl} alt={product.name} width='400' height='400' />
-        <div className='product-info'>
+        <div className='product-info flex-col'>
           <h2 className='product-title'>{product.productName}</h2>
           <a className='product-link' target='_blank' rel="noreferrer" href={product.url}>
             Link to Product

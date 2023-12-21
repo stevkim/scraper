@@ -11,16 +11,16 @@ export const getSession = (req, res) => {
     })
 };
 
-export const updateSession = (req, res) => {
+export const updateSession = (req, res, next) => {
   Session.findByIdAndUpdate({ _id: req.cookies.sessionKey }, { $push: { urls: req.body }})
     .then(result => {
       if (!result) {
         Session.create({ _id: req.cookies.sessionKey, urls: [req.body]})
           .then(() => {
-            res.status(201).json({ message: 'No recorded session so one was created.'})
+            next();
           })
       } else {
-        res.sendStatus(200);
+        next();
       }
     })
     .catch(err => {

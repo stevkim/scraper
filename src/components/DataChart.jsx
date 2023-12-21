@@ -36,7 +36,7 @@ const DataChart = ({ dataList, setOpenChart }) => {
   }
 
   return (
-    <div className='line-chart-wrapper'>
+    <div className='line-chart-wrapper flex-col'>
       <h1 className='line-chart-title'>Price Changes for {product.productName}</h1>
       {dataSet.dateData.length > 5
         ? <Line options={{ responsive: true }} data={data} />

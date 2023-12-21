@@ -24,3 +24,17 @@ export const chartData = (data) => {
     dateData: Array.from(dates).reverse()
   }
 };
+
+export const checkUrl = (url, list) => {
+  if (!url.includes('backcountry.com')) return false;
+  for (let i = 0; i < list.length; i++) {
+    if (list[i].url.includes(url)) {
+      return false;
+    }
+  }
+  return true;
+};
+
+export const convertName = (name) => {
+  return name.split(' ').join('').toLowerCase();
+}

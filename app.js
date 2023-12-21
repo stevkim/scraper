@@ -1,5 +1,4 @@
 import express from 'express';
-import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import './db.js';
 import { getProductInfo, addProduct } from './routes/productRouter.js';
@@ -11,15 +10,13 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.static('dist'));
-app.use(morgan('dev'));
 
 app.use(verifyCookie);
 
 app.get('/session', getSession);
-app.put('/session', updateSession);
 
 app.get('/product', getProductInfo);
-app.post('/product', addProduct);
+app.post('/product', updateSession, addProduct);
 app.get('/product/:name/history', getProductHistory);
 
 app.get('/*', (req, res) => {

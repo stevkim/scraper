@@ -1,18 +1,19 @@
 import { useState } from 'react';
-import { updateSession, addProduct, getSession } from '../lib/fetchFunctions.js';
-import { useDispatch } from 'react-redux';
+import { addProduct, getSession } from '../lib/fetchFunctions.js';
+import { checkUrl } from '../lib/utilityFunctions.js';
+import { useDispatch, useSelector } from 'react-redux';
 import { updateUrlList } from '../features/sessionSlice.js';
 import './components.css';
 
 const InputBar = () => {
   const dispatch = useDispatch();
+  const urlList = useSelector(state => state.session.urlList);
   const [url, setUrl] = useState('');
 
   const handleClick = () => {
-    if (!url.includes('backcountry.com')) return;
+    if (!checkUrl(url, urlList)) return;
     const path = new URL(url).pathname.slice(1);
-    addProduct({ name: path, url: url });
-    updateSession({ name: path, url: url })
+    addProduct({ name: path, url: url })
       .then(() => {
         getSession()
           .then(({ data }) => {
@@ -23,9 +24,9 @@ const InputBar = () => {
   };
 
   return (
-    <div className='input-section'>
+    <div className='input-section flex-col'>
       <p>Insert the URL of any product page to start tracking!</p>
-      <div className='input-wrapper'>
+      <div className='input-wrapper flex-row'>
         <input
           className='url-input'
           type='text'
