@@ -1,12 +1,10 @@
 <a id='readme-top'></a>
 
-<br />
-<div align="center">
-  <a href="https://github.com/Revenge-of-the-SithQL/atelier"></a>
-  <h3 align="center">
-    WebCountry
-  </h3>
-</div>
+<img src='https://github.com/stevkim/scraper/assets/113388860/c251a5c4-618f-4529-a19c-69e5405c4f7a' width='32%'></img>
+<img src='https://github.com/stevkim/scraper/assets/113388860/c95f2f54-3b0e-47d4-8b33-49f603c14a40' width='32%'></img>
+<img src='https://github.com/stevkim/scraper/assets/113388860/4050696c-31c4-4be2-a1ce-d2ae381cd1e8' width='32%'></img>
+
+# WebCountry
 
 <details>
   <summary>Table of Contents</summary>
